@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+
 
 const BADGE = {
   Wishlist: 'bg-blue-pale text-[#3B6D11]',
@@ -6,6 +7,8 @@ const BADGE = {
 };
 
 export default function DestinationCard({ destination, onDelete }) {
+  const navigate = useNavigate();
+  
   const { id, name, country, region, status, notes, coverPhoto } = destination;
 
   function handleDelete(e) {
@@ -21,7 +24,6 @@ export default function DestinationCard({ destination, onDelete }) {
       to={`/destinations/${id}`}
       className="block bg-white border border-[rgba(24,95,165,0.13)] rounded overflow-hidden shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-200 group"
     >
-      {/* Image */}
       <div
         className="h-44 bg-cover bg-center relative"
         style={{
@@ -33,7 +35,6 @@ export default function DestinationCard({ destination, onDelete }) {
         </span>
       </div>
 
-      {/* Body */}
       <div className="px-5 pt-4.5] pb-4">
         <h3 className="font-[Playfair_Display] text-[22px] font-medium text-[#042C53] leading-tight">
           {name}
@@ -47,15 +48,17 @@ export default function DestinationCard({ destination, onDelete }) {
           </p>
         )}
 
-        {/* Actions */}
         <div className="flex gap-2 mt-3.5">
-          <Link
-            to={`/destinations/${id}/edit`}
-            onClick={(e) => e.stopPropagation()}
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              navigate(`/destinations/${id}/edit`);
+            }}
             className="font-[Inter] text-[10px] tracking-[0.15em] uppercase px-3.5 py-1.5 rounded-sm border border-[rgba(24,95,165,0.13)] text-[#2a4a6b] bg-white hover:border-blue-light hover:text-blue hover:bg-blue-pale transition-all duration-150"
           >
             Edit
-          </Link>
+          </button>
           <button
             onClick={handleDelete}
             className="font-[Inter] text-[10px] tracking-[0.15em] uppercase px-3.5 py-1.5 rounded-sm border border-[#F7C1C1] text-[#A32D2D] bg-white hover:bg-[#FCEBEB] transition-all duration-150"
