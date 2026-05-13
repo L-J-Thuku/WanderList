@@ -29,11 +29,11 @@ export default function Home({ destinations, onDelete }) {
           </p>
           <div className="flex gap-3 justify-center flex-wrap">
             <Link to="/add"
-              className="bg-green text-white font-jost text-[11px] tracking-[0.2em] uppercase px-8 py-[14px] rounded-sm hover:bg-[#3B6D11] hover:-translate-y-px transition-all duration-200">
+              className="bg-green text-white font-jost text-[11px] tracking-[0.2em] uppercase px-8 py-3.5 rounded-sm hover:bg-[#3B6D11] hover:-translate-y-px transition-all duration-200">
               Start Your List
             </Link>
             <Link to="/destinations"
-              className="bg-transparent text-white border border-white/50 font-jost text-[11px] tracking-[0.2em] uppercase px-8 py-[14px] rounded-sm hover:bg-white/10 hover:border-white transition-all duration-200">
+              className="bg-transparent text-white border border-white/50 font-jost text-[11px] tracking-[0.2em] uppercase px-8 py-3.5 rounded-sm hover:bg-white/10 hover:border-white transition-all duration-200">
               Browse Destinations
             </Link>
           </div>
@@ -44,11 +44,11 @@ export default function Home({ destinations, onDelete }) {
       {recent.length > 0 ? (
         <section className="px-10 py-12 bg-[#F4F8F2]">
           <div className="flex items-end justify-between mb-6">
-            <h2 className="font-cormorant text-[34px] text-[#042C53]">
-              Recent <em className="italic text-green">Destinations</em>
+            <h2 className="font-[Display_Playfair] text-[34px] text-[#042C53]">
+              <em className="text-green">Recent Destinations</em>
             </h2>
             <Link to="/destinations"
-              className="text-[11px] tracking-[0.2em] uppercase text-blue border-b border-blue-light pb-[2px] hover:text-[#042C53] transition-colors duration-150">
+              className="text-[11px] tracking-[0.2em] uppercase text-blue border-b border-blue-light pb-0.5 hover:text-[#042C53] transition-colors duration-150">
               View All →
             </Link>
           </div>
@@ -67,7 +67,7 @@ export default function Home({ destinations, onDelete }) {
             Add your first dream destination and start building your travel story.
           </p>
           <Link to="/add"
-            className="bg-green text-white font-jost text-[11px] tracking-[0.2em] uppercase px-8 py-[14px] rounded-sm hover:bg-[#3B6D11] transition-colors duration-200">
+            className="text-white font-jost text-[11px] tracking-[0.2em] uppercase px-8 py-3.5 rounded-sm bg-[#3B6D11] transition-colors duration-200">
             + Add Your First Destination
           </Link>
         </section>

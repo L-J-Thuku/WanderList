@@ -2,12 +2,12 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 
 const BADGE = {
   Wishlist: 'bg-blue-pale text-[##3B6D11]',
-  Visited:  'bg-[#042C53] text-green-light',
+  Visited:  'bg-blue-pale text-[#042C53]',
 };
 
 export default function DestinationDetail({ destinations, onDelete }) {
-  const { id }      = useParams();
-  const navigate    = useNavigate();
+  const { id } = useParams();
+  const navigate = useNavigate();
   const destination = destinations.find((d) => d.id === parseInt(id));
 
   if (!destination) {
@@ -35,7 +35,7 @@ export default function DestinationDetail({ destinations, onDelete }) {
 
       {/* Hero image */}
       <div
-        className="h-[340px] bg-cover bg-center relative"
+        className="h-85 bg-cover bg-center relative"
         style={{
           backgroundImage: `url(${coverPhoto || 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80'})`,
         }}

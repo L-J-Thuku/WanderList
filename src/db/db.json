@@ -8,6 +8,15 @@
       "notes": "I'd like to settle in a 5-Star hotel, swim with the dolphins e.t.c",
       "coverPhoto": "https://unsplash.com/photos/green-island-on-blue-sea-under-blue-sky-during-daytime-jJFLzdM0qMU",
       "id": "-RpFm_ff6SQ"
+    },
+    {
+      "name": "Amalfi Coast",
+      "country": "Italy",
+      "region": "Europe",
+      "status": "Visited",
+      "notes": "I'd like to go cruising on a yatch.",
+      "coverPhoto": "https://unsplash.com/photos/white-boat-on-body-of-water-near-green-and-brown-mountain-during-daytime-1zkHXas1GIo",
+      "id": "bURGZPovKFg"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

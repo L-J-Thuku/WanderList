@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const BADGE = {
   Wishlist: 'bg-blue-pale text-[#3B6D11]',
-  Visited:  'bg-[#042C53] text-green-light',
+  Visited:  'bg-blue-pale text-[#042C53]',
 };
 
 export default function DestinationCard({ destination, onDelete }) {
@@ -35,30 +35,30 @@ export default function DestinationCard({ destination, onDelete }) {
 
       {/* Body */}
       <div className="px-5 pt-4.5] pb-4">
-        <h3 className="font-cormorant text-[22px] font-medium text-[#042C53] leading-tight">
+        <h3 className="font-[Playfair_Display] text-[22px] font-medium text-[#042C53] leading-tight">
           {name}
         </h3>
-        <p className="text-[11px] tracking-[0.15em] uppercase text-[#6b8fa8] mt-[3px]">
+        <p className="text-[11px] tracking-[0.15em] uppercase text-[#6b8fa8] mt-0.75">
           {country}{region ? ` · ${region}` : ''}
         </p>
         {notes && (
-          <p className="font-cormorant italic text-[15px] text-[#2a4a6b] leading-relaxed mt-[10px] line-clamp-2">
+          <p className="font-[Inter] italic text-[15px] text-[#2a4a6b] leading-relaxed mt-2.5 line-clamp-2">
             "{notes}"
           </p>
         )}
 
         {/* Actions */}
-        <div className="flex gap-2 mt-[14px]">
+        <div className="flex gap-2 mt-3.5">
           <Link
             to={`/destinations/${id}/edit`}
             onClick={(e) => e.stopPropagation()}
-            className="font-jost text-[10px] tracking-[0.15em] uppercase px-[14px] py-[6px] rounded-sm border border-[rgba(24,95,165,0.13)] text-[#2a4a6b] bg-white hover:border-blue-light hover:text-blue hover:bg-blue-pale transition-all duration-150"
+            className="font-[Inter] text-[10px] tracking-[0.15em] uppercase px-3.5 py-1.5 rounded-sm border border-[rgba(24,95,165,0.13)] text-[#2a4a6b] bg-white hover:border-blue-light hover:text-blue hover:bg-blue-pale transition-all duration-150"
           >
             Edit
           </Link>
           <button
             onClick={handleDelete}
-            className="font-jost text-[10px] tracking-[0.15em] uppercase px-[14px] py-[6px] rounded-sm border border-[#F7C1C1] text-[#A32D2D] bg-white hover:bg-[#FCEBEB] transition-all duration-150"
+            className="font-[Inter] text-[10px] tracking-[0.15em] uppercase px-3.5 py-1.5 rounded-sm border border-[#F7C1C1] text-[#A32D2D] bg-white hover:bg-[#FCEBEB] transition-all duration-150"
           >
             Delete
           </button>
