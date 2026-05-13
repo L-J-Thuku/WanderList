@@ -20,7 +20,7 @@ export default function DestinationCard({ destination, onDelete }) {
   return (
     <Link
       to={`/destinations/${id}`}
-      className="block bg-white border border-border rounded overflow-hidden shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-200 group"
+      className="block bg-white border border-[rgba(24,95,165,0.13)] rounded overflow-hidden shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-200 group"
     >
       {/* Image */}
       <div
@@ -39,7 +39,7 @@ export default function DestinationCard({ destination, onDelete }) {
         <h3 className="font-cormorant text-[22px] font-medium text-[#042C53] leading-tight">
           {name}
         </h3>
-        <p className="text-[11px] tracking-[0.15em] uppercase text-textmute mt-[3px]">
+        <p className="text-[11px] tracking-[0.15em] uppercase text-[#6b8fa8] mt-[3px]">
           {country}{region ? ` · ${region}` : ''}
         </p>
         {notes && (
@@ -53,7 +53,7 @@ export default function DestinationCard({ destination, onDelete }) {
           <Link
             to={`/destinations/${id}/edit`}
             onClick={(e) => e.stopPropagation()}
-            className="font-jost text-[10px] tracking-[0.15em] uppercase px-[14px] py-[6px] rounded-sm border border-border text-textmid bg-white hover:border-blue-light hover:text-blue hover:bg-blue-pale transition-all duration-150"
+            className="font-jost text-[10px] tracking-[0.15em] uppercase px-[14px] py-[6px] rounded-sm border border-[rgba(24,95,165,0.13)] text-textmid bg-white hover:border-blue-light hover:text-blue hover:bg-blue-pale transition-all duration-150"
           >
             Edit
           </Link>

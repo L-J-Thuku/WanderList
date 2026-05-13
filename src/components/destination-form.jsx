@@ -20,10 +20,10 @@ const BADGE = {
 };
 
 const inputBase =
-  'w-full bg-white border border-border rounded-sm px-[14px] py-[10px] text-[13px] text-textdark font-jost focus:outline-none focus:border-blue-mid focus:ring-2 focus:ring-blue-mid/10 transition-colors duration-200';
+  'w-full bg-white border border-[rgba(24,95,165,0.13)] rounded-sm px-[14px] py-[10px] text-[13px] text-[#0c1f2e] font-jost focus:outline-none focus:border-blue-mid focus:ring-2 focus:ring-blue-mid/10 transition-colors duration-200';
 
 const labelBase =
-  'font-cinzel text-[9px] tracking-[0.25em] uppercase text-textmute block mb-[6px]';
+  'font-cinzel text-[9px] tracking-[0.25em] uppercase text-[#6b8fa8] block mb-[6px]';
 
 export default function DestinationForm({ onSubmit, existingData }) {
   const [form, setForm]       = useState(EMPTY_FORM);
@@ -71,7 +71,7 @@ export default function DestinationForm({ onSubmit, existingData }) {
         <h1 className="font-cormorant text-[38px] font-light text-[#042C53] leading-[1.15] mb-2">
           {isEdit ? <>Update <em className="italic text-green">Your Journey</em></> : <>Add to Your <em className="italic text-green">Bucket List</em></>}
         </h1>
-        <p className="text-[13px] text-textmute leading-relaxed mb-8">
+        <p className="text-[13px] text-[#6b8fa8] leading-relaxed mb-8">
           {isEdit
             ? 'Update the details for this destination.'
             : "Save a place you're dreaming of, planning to visit, or have already explored."}
@@ -137,7 +137,7 @@ export default function DestinationForm({ onSubmit, existingData }) {
           {/* Actions */}
           <div className="flex gap-3 mt-2">
             <button type="button" onClick={() => navigate(-1)}
-              className="font-jost text-[11px] tracking-[0.2em] uppercase px-6 py-[14px] rounded-sm border border-border text-textmid bg-white hover:border-[#042C53] hover:text-[#042C53] transition-all duration-200">
+              className="font-jost text-[11px] tracking-[0.2em] uppercase px-6 py-[14px] rounded-sm border border-[rgba(24,95,165,0.13)] text-textmid bg-white hover:border-[#042C53] hover:text-[#042C53] transition-all duration-200">
               Cancel
             </button>
             <button type="submit" disabled={loading}
@@ -151,10 +151,10 @@ export default function DestinationForm({ onSubmit, existingData }) {
       {/* Live preview */}
       {(form.name || form.coverPhoto) && (
         <div className="sticky top-[88px]">
-          <p className="font-cinzel text-[9px] tracking-[0.3em] uppercase text-textmute mb-3">
+          <p className="font-cinzel text-[9px] tracking-[0.3em] uppercase text-[#6b8fa8] mb-3">
             Live Preview
           </p>
-          <div className="bg-white border border-border rounded overflow-hidden shadow-card">
+          <div className="bg-white border border-[rgba(24,95,165,0.13)] rounded overflow-hidden shadow-card">
             {form.coverPhoto && (
               <div className="h-44 bg-cover bg-center"
                 style={{ backgroundImage: `url(${form.coverPhoto})` }} />
@@ -166,7 +166,7 @@ export default function DestinationForm({ onSubmit, existingData }) {
               <h3 className="font-cormorant text-[24px] font-medium text-[#042C53]">
                 {form.name || 'Destination name'}
               </h3>
-              <p className="text-[11px] tracking-[0.15em] uppercase text-textmute mt-[3px]">
+              <p className="text-[11px] tracking-[0.15em] uppercase text-[#6b8fa8] mt-[3px]">
                 {form.country || 'Country'}{form.region ? ` · ${form.region}` : ''}
               </p>
               {form.notes && (

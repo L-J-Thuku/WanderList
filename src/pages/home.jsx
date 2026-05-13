@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import DestinationCard from '../components/destination-form';
 
 export default function Home({ destinations, onDelete }) {
-  const recent       = destinations.slice(0, 3);
+  const recent = destinations.slice(0, 3);
   const totalVisited = destinations.filter((d) => d.status === 'Visited').length;
   const totalPlanned = destinations.filter((d) => d.status === 'Planned').length;
   const totalWishlist = destinations.filter((d) => d.status === 'Wishlist').length;
@@ -64,7 +64,7 @@ export default function Home({ destinations, onDelete }) {
           <h2 className="font-cormorant text-[32px] text-[#042C53] mb-3">
             Your bucket list is empty
           </h2>
-          <p className="text-[14px] text-textmute max-w-sm leading-relaxed mb-6">
+          <p className="text-[14px] text-[#6b8fa8] max-w-sm leading-relaxed mb-6">
             Add your first dream destination and start building your travel story.
           </p>
           <Link to="/add"

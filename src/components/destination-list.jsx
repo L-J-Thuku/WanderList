@@ -6,7 +6,7 @@ export default function DestinationList({ destinations, onDelete }) {
       <div className="flex flex-col items-center justify-center py-20 px-10 text-center">
         <div className="text-4xl text-green-light mb-4">✦</div>
         <h2 className="font-cormorant text-[28px] text-[#042C53] mb-2">No destinations found</h2>
-        <p className="text-[14px] text-textmute max-w-sm leading-relaxed">
+        <p className="text-[14px] text-[#6b8fa8] max-w-sm leading-relaxed">
           Try adjusting your search or filter, or add a new destination.
         </p>
       </div>

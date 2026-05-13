@@ -79,7 +79,7 @@ export default function DestinationDetail({ destinations, onDelete }) {
               "{notes}"
             </blockquote>
           ) : (
-            <p className="text-[13px] text-textmute italic">
+            <p className="text-[13px] text-[#6b8fa8] italic">
               No notes yet. Edit this destination to add some.
             </p>
           )}
@@ -87,7 +87,7 @@ export default function DestinationDetail({ destinations, onDelete }) {
 
         {/* Sidebar */}
         <div className="flex flex-col gap-3">
-          <div className="bg-white border border-border rounded p-5">
+          <div className="bg-white border border-[rgba(24,95,165,0.13)] rounded p-5">
             <p className="font-cinzel text-[9px] tracking-[0.3em] uppercase text-blue mb-4">
               Details
             </p>
@@ -99,9 +99,9 @@ export default function DestinationDetail({ destinations, onDelete }) {
               ].map((row, i, arr) => (
                 <div
                   key={row.label}
-                  className={`flex justify-between items-center py-[10px] ${i < arr.length - 1 ? 'border-b border-border' : ''}`}
+                  className={`flex justify-between items-center py-[10px] ${i < arr.length - 1 ? 'border-b border-[rgba(24,95,165,0.13)]' : ''}`}
                 >
-                  <span className="text-[11px] text-textmute">{row.label}</span>
+                  <span className="text-[11px] text-[#6b8fa8]">{row.label}</span>
                   {row.badge ? (
                     <span className={`text-[9px] tracking-[0.15em] uppercase font-jost font-medium px-3 py-[4px] rounded-sm ${BADGE[status] || BADGE.Wishlist}`}>
                       {status}
