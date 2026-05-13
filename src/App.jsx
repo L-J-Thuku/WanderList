@@ -13,7 +13,6 @@ export default function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
-  // READ
   useEffect(() => {
     fetch('http://localhost:3000/destinations')
       .then((res) => {
@@ -25,7 +24,6 @@ export default function App() {
       .finally(() => setLoading(false));
   }, []);
 
-  // CREATE
   async function handleAdd(formData) {
     const res = await fetch('http://localhost:3000/destinations', {
       method: 'POST',
@@ -37,7 +35,6 @@ export default function App() {
     setDestinations((prev) => [...prev, newDest]);
   }
 
-  // UPDATE
   async function handleEdit(formData) {
     const res = await fetch(`${'http://localhost:3000/destinations'}/${formData.id}`, {
       method: 'PATCH',
@@ -49,7 +46,6 @@ export default function App() {
     setDestinations((prev) => prev.map((d) => (d.id === updated.id ? updated : d)));
   }
 
-  // DELETE
   async function handleDelete(id) {
     const res = await fetch(`${'http://localhost:3000/destinations'}/${id}`, { method: 'DELETE' });
     if (!res.ok) throw new Error('Failed to delete');
