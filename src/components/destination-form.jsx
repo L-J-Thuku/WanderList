@@ -20,7 +20,7 @@ const BADGE = {
 };
 
 const inputBase =
-  'w-full bg-white border border-[rgba(24,95,165,0.13)] rounded-sm px-[14px] py-[10px] text-[13px] text-[#0c1f2e] font-jost focus:outline-none focus:border-blue-mid focus:ring-2 focus:ring-blue-mid/10 transition-colors duration-200';
+  'w-full bg-white border border-[rgba(24,95,165,0.13)] rounded-sm px-[14px] py-[10px] text-[13px] text-[#0c1f2e] font-jost focus:outline-none focus:border-blue-mid focus:ring-2 focus:ring-blue-mid/10';
 
 const labelBase =
   'font-cinzel text-[9px] tracking-[0.25em] uppercase text-[#6b8fa8] block mb-[6px]';
@@ -137,47 +137,16 @@ export default function DestinationForm({ onSubmit, existingData }) {
           {/* Actions */}
           <div className="flex gap-3 mt-2">
             <button type="button" onClick={() => navigate(-1)}
-              className="font-jost text-[11px] tracking-[0.2em] uppercase px-6 py-[14px] rounded-sm border border-[rgba(24,95,165,0.13)] text-[#2a4a6b] bg-white hover:border-[#042C53] hover:text-[#042C53] transition-all duration-200">
+              className="font-jost text-[11px] tracking-[0.2em] uppercase px-6 py-3.5 rounded-sm border border-[rgba(24,95,165,0.13)] text-[#2a4a6b] bg-white hover:border-[#042C53] hover:text-[#042C53] transition-all duration-200">
               Cancel
             </button>
             <button type="submit" disabled={loading}
-              className="flex-1 font-jost text-[11px] tracking-[0.2em] uppercase py-[14px] rounded-sm bg-green text-white hover:bg-[#3B6D11] hover:-translate-y-px transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed">
+              className="flex-1 font-jost text-[11px] tracking-[0.2em] uppercase py-3.5 rounded-sm bg-green text-white bg-[#3B6D11] hover:-translate-y-px transition-all duration-200">
               {loading ? 'Saving...' : isEdit ? 'Update Destination' : 'Save to Bucket List'}
             </button>
           </div>
         </form>
       </div>
-
-      {/* Live preview */}
-      {(form.name || form.coverPhoto) && (
-        <div className="sticky top-[88px]">
-          <p className="font-cinzel text-[9px] tracking-[0.3em] uppercase text-[#6b8fa8] mb-3">
-            Live Preview
-          </p>
-          <div className="bg-white border border-[rgba(24,95,165,0.13)] rounded overflow-hidden shadow-card">
-            {form.coverPhoto && (
-              <div className="h-44 bg-cover bg-center"
-                style={{ backgroundImage: `url(${form.coverPhoto})` }} />
-            )}
-            <div className="px-5 py-[18px]">
-              <span className={`inline-block text-[9px] tracking-[0.15em] uppercase font-jost font-medium px-3 py-[5px] rounded-sm mb-3 ${BADGE[form.status] || BADGE.Wishlist}`}>
-                {form.status}
-              </span>
-              <h3 className="font-cormorant text-[24px] font-medium text-[#042C53]">
-                {form.name || 'Destination name'}
-              </h3>
-              <p className="text-[11px] tracking-[0.15em] uppercase text-[#6b8fa8] mt-[3px]">
-                {form.country || 'Country'}{form.region ? ` · ${form.region}` : ''}
-              </p>
-              {form.notes && (
-                <p className="font-cormorant italic text-[15px] text-[#2a4a6b] leading-relaxed mt-3">
-                  "{form.notes}"
-                </p>
-              )}
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }

@@ -60,8 +60,8 @@ export default function App() {
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center h-screen gap-4">
-        <span className="font-cinzel text-[28px] font-bold text-[#042C53] tracking-wide">
-          W<span className="text-green">L</span>
+        <span className="font-[Cinzel_Decorative] text-[28px] font-bold text-[#042C53] tracking-wide">
+          W<span className="text-green font-[Cinzel_Decorative]">L</span>
         </span>
         <p className="font-cormorant italic text-[#6b8fa8] text-[16px]">
           Loading your destinations…
@@ -74,12 +74,12 @@ export default function App() {
     return (
       <div className="flex items-center justify-center h-screen px-10 text-center">
         <div>
-          <p className="font-cinzel text-[13px] tracking-[0.2em] text-[#A32D2D] mb-3">
+          <p className="font-[Playfair_Display] text-[13px] tracking-[0.2em] text-[#A32D2D] mb-3">
             CONNECTION ERROR
           </p>
           <p className="text-[#6b8fa8] max-w-md leading-relaxed">{error}</p>
           <code className="block mt-4 bg-green-pale text-[#3B6D11] px-4 py-2 rounded text-[13px]">
-            json-server --watch db.json --port 5000
+            json-server --watch db.json --port 3000
           </code>
         </div>
       </div>
@@ -89,8 +89,8 @@ export default function App() {
   return (
     <BrowserRouter>
       <div className="flex flex-col min-h-screen">
-        <Navbar />
         <main className="flex-1">
+        <Navbar />
           <Routes>
             <Route path="/"
               element={<Home destinations={destinations} onDelete={handleDelete} />} />
