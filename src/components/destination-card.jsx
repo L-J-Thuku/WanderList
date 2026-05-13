@@ -43,7 +43,7 @@ export default function DestinationCard({ destination, onDelete }) {
           {country}{region ? ` · ${region}` : ''}
         </p>
         {notes && (
-          <p className="font-cormorant italic text-[15px] text-textmid leading-relaxed mt-[10px] line-clamp-2">
+          <p className="font-cormorant italic text-[15px] text-[#2a4a6b] leading-relaxed mt-[10px] line-clamp-2">
             "{notes}"
           </p>
         )}
@@ -53,7 +53,7 @@ export default function DestinationCard({ destination, onDelete }) {
           <Link
             to={`/destinations/${id}/edit`}
             onClick={(e) => e.stopPropagation()}
-            className="font-jost text-[10px] tracking-[0.15em] uppercase px-[14px] py-[6px] rounded-sm border border-[rgba(24,95,165,0.13)] text-textmid bg-white hover:border-blue-light hover:text-blue hover:bg-blue-pale transition-all duration-150"
+            className="font-jost text-[10px] tracking-[0.15em] uppercase px-[14px] py-[6px] rounded-sm border border-[rgba(24,95,165,0.13)] text-[#2a4a6b] bg-white hover:border-blue-light hover:text-blue hover:bg-blue-pale transition-all duration-150"
           >
             Edit
           </Link>

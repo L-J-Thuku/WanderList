@@ -9,7 +9,7 @@ export default function Navbar() {
   const linkIdle   = 'text-[#6b8fa8] border-transparent hover:text-[#042C53]';
 
   return (
-    <nav className="sticky top-0 z-50 flex items-center justify-between px-12 h-[68px] bg-[#FAFCFE]/95 backdrop-blur-sm border-b border-[rgba(24,95,165,0.13)]">
+    <nav className="sticky top-0 z-50 flex items-center justify-between px-12 h-17 bg-[#FAFCFE]/95 backdrop-blur-sm border-b border-[rgba(24,95,165,0.13)]">
 
       {/* Logo */}
       <Link to="/" className="font-cinzel text-2xl font-bold text-[#042C53] tracking-wide">

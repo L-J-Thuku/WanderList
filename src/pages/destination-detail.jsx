@@ -75,7 +75,7 @@ export default function DestinationDetail({ destinations, onDelete }) {
             Travel Notes
           </p>
           {notes ? (
-            <blockquote className="font-cormorant italic text-[20px] text-textmid leading-[1.7] border-l-2 border-green-light pl-5">
+            <blockquote className="font-cormorant italic text-[20px] text-[#2a4a6b] leading-[1.7] border-l-2 border-green-light pl-5">
               "{notes}"
             </blockquote>
           ) : (

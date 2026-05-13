@@ -137,7 +137,7 @@ export default function DestinationForm({ onSubmit, existingData }) {
           {/* Actions */}
           <div className="flex gap-3 mt-2">
             <button type="button" onClick={() => navigate(-1)}
-              className="font-jost text-[11px] tracking-[0.2em] uppercase px-6 py-[14px] rounded-sm border border-[rgba(24,95,165,0.13)] text-textmid bg-white hover:border-[#042C53] hover:text-[#042C53] transition-all duration-200">
+              className="font-jost text-[11px] tracking-[0.2em] uppercase px-6 py-[14px] rounded-sm border border-[rgba(24,95,165,0.13)] text-[#2a4a6b] bg-white hover:border-[#042C53] hover:text-[#042C53] transition-all duration-200">
               Cancel
             </button>
             <button type="submit" disabled={loading}
@@ -170,7 +170,7 @@ export default function DestinationForm({ onSubmit, existingData }) {
                 {form.country || 'Country'}{form.region ? ` · ${form.region}` : ''}
               </p>
               {form.notes && (
-                <p className="font-cormorant italic text-[15px] text-textmid leading-relaxed mt-3">
+                <p className="font-cormorant italic text-[15px] text-[#2a4a6b] leading-relaxed mt-3">
                   "{form.notes}"
                 </p>
               )}
