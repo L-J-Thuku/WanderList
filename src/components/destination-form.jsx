@@ -10,12 +10,11 @@ const EMPTY_FORM = {
   coverPhoto: '',
 };
 
-const STATUS_OPTIONS  = ['Wishlist', 'Planned', 'Visited'];
+const STATUS_OPTIONS  = ['Wishlist', 'Visited'];
 const REGION_OPTIONS  = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania', 'Middle East'];
 
 const BADGE = {
-  Wishlist: 'bg-blue-pale text-[#042C53]',
-  Planned:  'bg-green-pale text-[#3B6D11]',
+  Wishlist: 'bg-blue-pale text-[#3B6D11]',
   Visited:  'bg-[#042C53] text-green-light',
 };
 
@@ -61,17 +60,17 @@ export default function DestinationForm({ onSubmit, existingData }) {
   }
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-12 px-12 py-12 max-w-5xl mx-auto items-start">
+    <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-12 px-12 py-12 max-w-5xl mx-auto items-start font-[Inter]">
 
       {/* Form */}
       <div>
-        <p className="font-cinzel text-[10px] tracking-[0.35em] uppercase text-green mb-3">
+        <p className="font-[Playfair_Display_SC] text-[10px] tracking-[0.35em] uppercase text-green mb-3">
           {isEdit ? 'Edit destination' : 'New destination'}
         </p>
-        <h1 className="font-cormorant text-[38px] font-light text-[#042C53] leading-[1.15] mb-2">
+        <h1 className="font-[Playfair_Display] text-[38px] font-light text-[#042C53] leading-[1.15] mb-2">
           {isEdit ? <>Update <em className="italic text-green">Your Journey</em></> : <>Add to Your <em className="italic text-green">Bucket List</em></>}
         </h1>
-        <p className="text-[13px] text-[#6b8fa8] leading-relaxed mb-8">
+        <p className="text-[13px] text-[#6b8fa8] leading-relaxed mb-8 font-[Playfair_Display]">
           {isEdit
             ? 'Update the details for this destination.'
             : "Save a place you're dreaming of, planning to visit, or have already explored."}
@@ -79,7 +78,7 @@ export default function DestinationForm({ onSubmit, existingData }) {
 
         <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-5">
           {error && (
-            <div className="bg-[#FCEBEB] border border-[#F7C1C1] rounded-sm px-4 py-[10px] text-[13px] text-[#A32D2D]">
+            <div className="bg-[#FCEBEB] border border-[#F7C1C1] rounded-sm px-4 py-2.5 text-[13px] text-[#A32D2D]">
               {error}
             </div>
           )}
@@ -131,17 +130,17 @@ export default function DestinationForm({ onSubmit, existingData }) {
             <textarea id="notes" name="notes" rows={4}
               placeholder="What do you want to see, do, or remember about this place?"
               value={form.notes} onChange={handleChange}
-              className={`${inputBase} resize-y min-h-[100px] leading-relaxed`} />
+              className={`${inputBase} resize-y min-h-25`} />
           </div>
 
           {/* Actions */}
           <div className="flex gap-3 mt-2">
             <button type="button" onClick={() => navigate(-1)}
-              className="font-jost text-[11px] tracking-[0.2em] uppercase px-6 py-3.5 rounded-sm border border-[rgba(24,95,165,0.13)] text-[#2a4a6b] bg-white hover:border-[#042C53] hover:text-[#042C53] transition-all duration-200">
+              className="font-[Inter] text-[11px] tracking-[0.2em] uppercase px-6 py-3.5 rounded-sm border border-[rgba(24,95,165,0.13)] text-[#2a4a6b] bg-white hover:border-[#042C53] hover:text-[#042C53] transition-all duration-200">
               Cancel
             </button>
             <button type="submit" disabled={loading}
-              className="flex-1 font-jost text-[11px] tracking-[0.2em] uppercase py-3.5 rounded-sm bg-green text-white bg-[#3B6D11] hover:-translate-y-px transition-all duration-200">
+              className="flex-1 font-[Inter] text-[11px] tracking-[0.2em] uppercase py-3.5 rounded-sm bg-green text-white bg-[#3B6D11] hover:-translate-y-px transition-all duration-200">
               {loading ? 'Saving...' : isEdit ? 'Update Destination' : 'Save to Bucket List'}
             </button>
           </div>

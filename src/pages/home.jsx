@@ -4,7 +4,6 @@ import DestinationCard from '../components/destination-form';
 export default function Home({ destinations, onDelete }) {
   const recent = destinations.slice(0, 3);
   const totalVisited = destinations.filter((d) => d.status === 'Visited').length;
-  const totalPlanned = destinations.filter((d) => d.status === 'Planned').length;
   const totalWishlist = destinations.filter((d) => d.status === 'Wishlist').length;
 
   return (

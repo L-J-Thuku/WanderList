@@ -1,8 +1,7 @@
 import { useParams, Link, useNavigate } from 'react-router-dom';
 
 const BADGE = {
-  Wishlist: 'bg-blue-pale text-[#042C53]',
-  Planned:  'bg-green-pale text-[#3B6D11]',
+  Wishlist: 'bg-blue-pale text-[##3B6D11]',
   Visited:  'bg-[#042C53] text-green-light',
 };
 

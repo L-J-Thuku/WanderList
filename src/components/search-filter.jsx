@@ -1,4 +1,4 @@
-const STATUS_OPTIONS = ['All', 'Wishlist', 'Planned', 'Visited'];
+const STATUS_OPTIONS = ['All', 'Wishlist', 'Visited'];
 
 export default function SearchFilter({ search, onSearchChange, activeStatus, onStatusChange }) {
   return (
