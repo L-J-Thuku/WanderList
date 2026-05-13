@@ -2,7 +2,7 @@ const STATUS_OPTIONS = ['All', 'Wishlist', 'Visited'];
 
 export default function SearchFilter({ search, onSearchChange, activeStatus, onStatusChange }) {
   return (
-    <div className="flex items-center gap-3 px-10 py-[18px] bg-white border-b border-[rgba(24,95,165,0.13)] flex-wrap">
+    <div className="flex items-center gap-3 px-10 py-4.5 bg-white border-b border-[rgba(24,95,165,0.13)] flex-wrap">
 
       {/* Search box */}
       <div className="flex items-center gap-2 flex-1 min-w-[200px] bg-[#F4F8F2] border border-[rgba(24,95,165,0.13)] rounded-sm px-4 h-10 focus-within:border-blue-mid focus-within:bg-white transition-colors duration-200">

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import DestinationCard from '../components/destination-form';
+import DestinationList from '../components/destination-list';
 
 export default function Home({ destinations, onDelete }) {
   const recent = destinations.slice(0, 3);
@@ -60,14 +61,14 @@ export default function Home({ destinations, onDelete }) {
         </section>
       ) : (
         <section className="flex flex-col items-center py-20 px-10 text-center bg-[#F4F8F2]">
-          <h2 className="font-cormorant text-[32px] text-[#042C53] mb-3">
+          <h2 className="font-[Inter] text-[32px] text-[#042C53] mb-3">
             Your bucket list is empty
           </h2>
-          <p className="text-[14px] text-[#6b8fa8] max-w-sm leading-relaxed mb-6">
+          <p className="font-[Inter] text-[14px] text-[#6b8fa8] max-w-sm leading-relaxed mb-6">
             Add your first dream destination and start building your travel story.
           </p>
           <Link to="/add"
-            className="text-white font-jost text-[11px] tracking-[0.2em] uppercase px-8 py-3.5 rounded-sm bg-[#3B6D11] transition-colors duration-200">
+            className="text-white font-[Inter] text-[11px] tracking-[0.2em] uppercase px-8 py-3.5 rounded-sm bg-[#3B6D11] transition-colors duration-200">
             + Add Your First Destination
           </Link>
         </section>

@@ -5,7 +5,6 @@ import Navbar from './components/navbar';
 import Footer from './components/footer';
 import Home from './pages/home';
 import Destinations from './pages/destinations';
-import DestinationDetail from './pages/destination-detail';
 import AddDestination from './pages/add-destination';
 import EditDestination from './pages/edit-destination';
 
@@ -63,7 +62,7 @@ export default function App() {
         <span className="font-[Cinzel_Decorative] text-[28px] font-bold text-[#042C53] tracking-wide">
           W<span className="text-green font-[Cinzel_Decorative]">L</span>
         </span>
-        <p className="font-cormorant italic text-[#6b8fa8] text-[16px]">
+        <p className="font-[Inter] italic text-[#6b8fa8] text-[16px]">
           Loading your destinations…
         </p>
       </div>
@@ -96,8 +95,6 @@ export default function App() {
               element={<Home destinations={destinations} onDelete={handleDelete} />} />
             <Route path="/destinations"
               element={<Destinations destinations={destinations} onDelete={handleDelete} />} />
-            <Route path="/destinations/:id"
-              element={<DestinationDetail destinations={destinations} onDelete={handleDelete} />} />
             <Route path="/destinations/:id/edit"
               element={<EditDestination destinations={destinations} onEdit={handleEdit} />} />
             <Route path="/add"
