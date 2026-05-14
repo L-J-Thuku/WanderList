@@ -25,12 +25,12 @@ const labelBase =
   'font-cinzel text-[9px] tracking-[0.25em] uppercase text-[#6b8fa8] block mb-[6px]';
 
 export default function DestinationForm({ onSubmit, existingData }) {
-  const [form, setForm]       = useState(EMPTY_FORM);
+  const [form, setForm] = useState(EMPTY_FORM);
   const [loading, setLoading] = useState(false);
-  const [error, setError]     = useState('');
+  const [error, setError] = useState('');
   const navigate = useNavigate();
-  const { id }   = useParams();
-  const isEdit   = Boolean(id);
+  const { id } = useParams();
+  const isEdit = Boolean(id);
 
   useEffect(() => {
     if (existingData) setForm(existingData);
@@ -68,11 +68,11 @@ export default function DestinationForm({ onSubmit, existingData }) {
           {isEdit ? 'Edit destination' : 'New destination'}
         </p>
         <h1 className="font-[Playfair_Display] text-[38px] font-light text-[#042C53] leading-[1.15] mb-2">
-          {isEdit ? <>Update <em className="italic text-green">Your Journey</em></> : <>Add to Your <em className="italic text-green">Bucket List</em></>}
+          {isEdit ? <h1>Update Your Journey</h1> : <h1>Add to Your Bucket List</h1>}
         </h1>
         <p className="text-[13px] text-[#6b8fa8] leading-relaxed mb-8 font-[Playfair_Display]">
           {isEdit
-            ? 'Update the details for this destination.'
+            ? 'Change the details for this destination.'
             : "Save a place you're dreaming of, planning to visit, or have already explored."}
         </p>
 
@@ -87,7 +87,7 @@ export default function DestinationForm({ onSubmit, existingData }) {
           <div className="grid grid-cols-2 gap-4">
             <div>
               <label className={labelBase} htmlFor="name">Destination name *</label>
-              <input id="name" name="name" type="text" placeholder="e.g. Amalfi Coast"
+              <input id="name" name="name" type="text" placeholder="e.g. Tuscany"
                 value={form.name} onChange={handleChange} className={inputBase} required />
             </div>
             <div>
