@@ -64,8 +64,9 @@ export default function DestinationForm({ onSubmit, existingData }) {
         </h1>
         <p className="text-[13px] text-[#6b8fa8] leading-relaxed mb-8 font-[Playfair_Display]">
           {isEdit
-            ? "Change the details for this destination."
-            : "Save a place you're dreaming of, planning to visit, or have already explored."}
+            ? 'Change the details for this destination.'
+            : "Save a place you're dreaming of, planning to visit, or have already explored."
+          }
         </p>
 
         <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-5">
