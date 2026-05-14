@@ -15,7 +15,7 @@ export default function SearchFilter({ search, onSearchChange, activeStatus, onS
           placeholder="Search destinations..."
           value={search}
           onChange={(e) => onSearchChange(e.target.value)}
-          className="flex-1 bg-transparent border-none outline-none text-[13px] text-[#0c1f2e] placeholder:text-[#6b8fa8] placeholder:italic placeholder:text-[12px] font-jost"
+          className="flex-1 bg-transparent border-none outline-none text-[13px] text-[#0c1f2e] placeholder:text-[#6b8fa8] placeholder:italic placeholder:text-[12px] font-[Inter]"
         />
         {search && (
           <button
@@ -33,7 +33,7 @@ export default function SearchFilter({ search, onSearchChange, activeStatus, onS
           <button
             key={status}
             onClick={() => onStatusChange(status)}
-            className={`font-jost text-[10px] tracking-[0.15em] uppercase font-medium px-4 py-2 rounded-sm border transition-all duration-200 ${
+            className={`font-[Inter] text-[10px] tracking-[0.15em] uppercase font-medium px-4 py-2 rounded-sm border transition-all duration-200 ${
               activeStatus === status
                 ? 'bg-[#042C53] text-white border-[#042C53]'
                 : 'bg-white text-[#6b8fa8] border-[rgba(24,95,165,0.13)] hover:border-blue-light hover:text-[#042C53]'

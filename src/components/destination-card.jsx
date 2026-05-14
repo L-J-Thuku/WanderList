@@ -29,7 +29,7 @@ export default function DestinationCard({ destination, onDelete }) {
           backgroundImage: `url(${coverPhoto || 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80'})`,
         }}
       >
-        <span className={`absolute top-3 right-3 text-[9px] tracking-[0.15em] uppercase font-jost font-medium px-3 py-1.25 rounded-sm ${BADGE[status] || BADGE.Wishlist}`}>
+        <span className={`absolute top-3 right-3 text-[9px] tracking-[0.15em] uppercase font-[Inter] font-medium px-3 py-1.25 bg-gray-300 rounded-lg ${BADGE[status] || BADGE.Wishlist}`}>
           {status}
         </span>
       </div>
