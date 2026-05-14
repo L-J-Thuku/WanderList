@@ -1,3 +1,5 @@
+import { Copyright } from 'lucide-react'
+
 export default function Footer() {
   return (
     <footer className="bg-[#042C53] py-10 px-12 mt-auto">
@@ -5,8 +7,9 @@ export default function Footer() {
         <div className="font-[Cinzel_Decorative] text-2xl font-bold text-white/60 tracking-wide">
           W<span className="text-green-light">L</span>
         </div>
-        <p className="text-[11px] font-[Inter] tracking-widest uppercase text-white/60 mt-1">
-          © {new Date().getFullYear()} Wanderlist. Built with React.
+        <p className="flex flex-row text-[11px] font-[Inter] tracking-widest uppercase text-white/60 mt-1">
+          <Copyright className='flex items-center size-3 mr-1.5'/> 
+          {new Date().getFullYear()} Wanderlist. Built with React.
         </p>
       </div>
     </footer>
