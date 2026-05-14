@@ -39,38 +39,6 @@ export default function Home({ destinations, onDelete }) {
           </div>
         </div>
       </section>
-
-      {destinations.length > 0 ? (
-        <section className="px-10 py-12 bg-[#F4F8F2]">
-          <div className="flex items-end justify-between mb-6">
-            <h2 className="font-[Display_Playfair] text-[34px] text-[#042C53]">
-              <em className="text-green">Recent Destinations</em>
-            </h2>
-            <Link to="/destinations"
-              className="text-[11px] tracking-[0.2em] uppercase text-blue border-b border-blue-light pb-0.5 hover:text-[#042C53] transition-colors duration-150">
-              View All →
-            </Link>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {destinations.map((dest) => (
-              <DestinationCard key={dest.id} destination={dest} onDelete={onDelete} />
-            ))}
-          </div>
-        </section>
-      ) : (
-        <section className="flex flex-col items-center py-20 px-10 text-center bg-[#F4F8F2]">
-          <h2 className="font-[Inter] text-[32px] text-[#042C53] mb-3">
-            Your bucket list is empty
-          </h2>
-          <p className="font-[Inter] text-[14px] text-[#6b8fa8] max-w-sm leading-relaxed mb-6">
-            Add your first dream destination and start building your travel story.
-          </p>
-          <Link to="/add"
-            className="text-white font-[Inter] text-[11px] tracking-[0.2em] uppercase px-8 py-3.5 rounded-sm bg-[#3B6D11] transition-colors duration-200">
-            + Add Your First Destination
-          </Link>
-        </section>
-      )}
     </div>
   );
 }

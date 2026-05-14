@@ -34,7 +34,7 @@ export default function DestinationCard({ destination, onDelete }) {
         </span>
       </div>
 
-      <div className="px-5 pt-4.5] pb-4">
+      <div className="px-5 pt-4.5 pb-4">
         <h3 className="font-[Playfair_Display] text-[22px] font-medium text-[#042C53] leading-tight">
           {name}
         </h3>
@@ -42,7 +42,7 @@ export default function DestinationCard({ destination, onDelete }) {
           {country}{region ? ` · ${region}` : ''}
         </p>
         {notes && (
-          <p className="font-[Inter] italic text-[15px] text-[#2a4a6b] leading-relaxed mt-2.5 line-clamp-2">
+          <p className="font-[Inter] italic text-[15px] text-[#2a4a6b] leading-relaxed mt-2.5 line-clamp-3">
             "{notes}"
           </p>
         )}

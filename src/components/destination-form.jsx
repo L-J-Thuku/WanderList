@@ -60,11 +60,11 @@ export default function DestinationForm({ onSubmit, existingData }) {
           {isEdit ? 'Edit destination' : 'New destination'}
         </p>
         <h1 className="font-[Playfair_Display] text-[38px] font-light text-[#042C53] leading-[1.15] mb-2">
-          {isEdit ? <h1>Update Your Journey</h1> : <h1>Add to Your Bucket List</h1>}
+          {isEdit ? 'Update Your Journey' : 'Add to Your Bucket List'}
         </h1>
         <p className="text-[13px] text-[#6b8fa8] leading-relaxed mb-8 font-[Playfair_Display]">
           {isEdit
-            ? 'Change the details for this destination.'
+            ? "Change the details for this destination."
             : "Save a place you're dreaming of, planning to visit, or have already explored."}
         </p>
 
@@ -119,6 +119,11 @@ export default function DestinationForm({ onSubmit, existingData }) {
               value={form.coverPhoto} onChange={handleChange} 
               className= 'w-full bg-white border border-[rgba(24,95,165,0.13)] rounded-sm px-3.5 py-2.5 text-[13px] text-[#0c1f2e] font-[Inter] focus:outline-none focus:border-blue-mid focus:ring-2 focus:ring-blue-mid/10'
             />
+            {form.coverPhoto && (
+              <div className="mt-2 h-20 rounded-sm bg-cover bg-center border border-border"
+                style={{ backgroundImage: `url(${form.coverPhoto})` }}>
+              </div>
+            )}
           </div>
 
           <div>
