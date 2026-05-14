@@ -1,15 +1,12 @@
+import { Search } from 'lucide-react'
+
 const STATUS_OPTIONS = ['All', 'Wishlist', 'Visited'];
 
 export default function SearchFilter({ search, onSearchChange, activeStatus, onStatusChange }) {
   return (
     <div className="flex items-center gap-3 px-10 py-4.5 bg-white border-b border-[rgba(24,95,165,0.13)] flex-wrap font-[Inter]">
-
-      {/* Search box */}
       <div className="flex items-center gap-2 flex-1 min-w-50 bg-[#F4F8F2] border border-[rgba(24,95,165,0.13)] rounded-sm px-4 h-10 focus-within:border-blue-mid focus-within:bg-white transition-colors duration-200">
-        <svg className="w-4 h-4 text-[#6b8fa8] shrink-0" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <circle cx="8.5" cy="8.5" r="5.5" />
-          <path d="M13.5 13.5L17 17" strokeLinecap="round" />
-        </svg>
+        <Search className="w-4 h-4 text-[#6b8fa8] shrink-0"/>
         <input
           type="text"
           placeholder="Search destinations..."
@@ -27,7 +24,6 @@ export default function SearchFilter({ search, onSearchChange, activeStatus, onS
         )}
       </div>
 
-      {/* Filter chips */}
       <div className="flex gap-2">
         {STATUS_OPTIONS.map((status) => (
           <button
