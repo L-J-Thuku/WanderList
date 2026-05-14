@@ -9,7 +9,6 @@ export default function Home({ destinations, onDelete }) {
 
   return (
     <div className="flex flex-col">
-      {/* Hero */}
       <section
         className="min-h-140 flex items-center justify-center text-center px-10 py-16"
         style={{
@@ -41,7 +40,6 @@ export default function Home({ destinations, onDelete }) {
         </div>
       </section>
 
-      {/* Recent destinations */}
       {destinations.length > 0 ? (
         <section className="px-10 py-12 bg-[#F4F8F2]">
           <div className="flex items-end justify-between mb-6">
