@@ -21,10 +21,10 @@ export default function DestinationCard({ destination, onDelete }) {
   return (
     <Link
       to={`/destinations/${id}`}
-      className="block bg-white border border-[rgba(24,95,165,0.13)] rounded overflow-hidden shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-200 group"
+      className="block bg-white border border-[rgba(24,95,165,0.13)] rounded overflow-hidden shadow-card hover:shadow-card-hover hover:-translate-y-1 group shadow-[0_4px_12px_rgba(0,0,0,0.25)]"
     >
       <div
-        className="h-44 bg-cover bg-center relative"
+        className="h-60 bg-cover bg-center relative"
         style={{
           backgroundImage: `url(${coverPhoto || 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80'})`,
         }}
