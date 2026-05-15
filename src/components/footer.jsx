@@ -10,7 +10,7 @@ export default function Footer() {
         <p className="flex text-[11px] gap-1 font-[Inter] tracking-widest uppercase text-white/60 mt-1">
           Images by
           <a href="https://unsplash.com/">
-            <span> Unsplash</span>
+            <span>Unsplash</span>
           </a>
         </p>
         <p className="flex flex-row text-[11px] font-[Inter] tracking-widest uppercase text-white/60 mt-1">

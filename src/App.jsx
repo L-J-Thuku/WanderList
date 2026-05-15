@@ -59,9 +59,6 @@ export default function App() {
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center h-screen gap-4">
-        <span className="font-[Cinzel_Decorative] text-[28px] font-bold text-[#042C53] tracking-wide">
-          W<span className="text-green font-[Cinzel_Decorative]">L</span>
-        </span>
         <p className="font-[Inter] italic text-[#6b8fa8] text-[16px]">
           Loading your destinations…
         </p>
@@ -77,9 +74,6 @@ export default function App() {
             CONNECTION ERROR
           </p>
           <p className="text-[#6b8fa8] max-w-md leading-relaxed">{error}</p>
-          <code className="block mt-4 bg-green-pale text-[#3B6D11] px-4 py-2 rounded text-[13px]">
-            json-server --watch db.json --port 3000
-          </code>
         </div>
       </div>
     );
