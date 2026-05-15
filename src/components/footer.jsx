@@ -7,6 +7,12 @@ export default function Footer() {
         <div className="font-[Cinzel_Decorative] text-2xl font-bold text-white/60 tracking-wide">
           W<span className="text-green-light">L</span>
         </div>
+        <p className="flex text-[11px] gap-1 font-[Inter] tracking-widest uppercase text-white/60 mt-1">
+          Images by
+          <a href="https://unsplash.com/">
+            <span> Unsplash</span>
+          </a>
+        </p>
         <p className="flex flex-row text-[11px] font-[Inter] tracking-widest uppercase text-white/60 mt-1">
           <Copyright className='flex items-center size-3 mr-1.5'/> 
           {new Date().getFullYear()} Wanderlist. Built with React.

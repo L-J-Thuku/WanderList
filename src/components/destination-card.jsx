@@ -21,7 +21,7 @@ export default function DestinationCard({ destination, onDelete }) {
   return (
     <Link
       to={`/destinations/${id}`}
-      className="block bg-white border border-[rgba(24,95,165,0.13)] rounded overflow-hidden shadow-card hover:shadow-card-hover hover:-translate-y-1 group shadow-[0_4px_12px_rgba(0,0,0,0.25)]"
+      className="block bg-white border border-[rgba(24,95,165,0.13)] rounded overflow-hidden shadow-card group shadow-[0_4px_12px_rgba(0,0,0,0.25)]"
     >
       <div
         className="h-60 bg-cover bg-center relative"
