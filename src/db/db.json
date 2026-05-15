@@ -1,13 +1,31 @@
 {
   "destinations": [
     {
+      "name": "Tuscany",
+      "country": "Italy",
+      "region": "Europe",
+      "status": "Visited",
+      "notes": "I'd like to explore the city",
+      "coverPhoto": "https://plus.unsplash.com/premium_photo-1675970835839-261d62505450?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dHVzY2FueXxlbnwwfHwwfHx8MA%3D%3D",
+      "id": "g_bavF3MdVY"
+    },
+    {
+      "name": "Amalfi Coast",
+      "country": "Italy",
+      "region": "Europe",
+      "status": "Visited",
+      "notes": "I'd like to cruise on a yacht, pop champagne.",
+      "coverPhoto": "https://plus.unsplash.com/premium_photo-1677494867836-3f56b1261bc5?q=80&w=1154&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "id": "b7ZAO8E3RQ8"
+    },
+    {
       "name": "Malindi",
       "country": "Kenya",
       "region": "Africa",
-      "status": "Visited",
-      "notes": "I'd like to settle in a 5-Star hotel, and swim with the dolphins e.t.c.",
+      "status": "Wishlist",
+      "notes": "I'd like to settle in a 5-Star hotel, swim with the dolphins e.t.c.",
       "coverPhoto": "https://images.unsplash.com/photo-1633345778967-3760204a4c57?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWFsaW5kaXxlbnwwfHwwfHx8MA%3D%3D",
-      "id": "mVMGCckdu3o"
+      "id": "s2iLrhL59mU"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

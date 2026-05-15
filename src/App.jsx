@@ -27,7 +27,9 @@ export default function App() {
   async function handleAdd(formData) {
     const res = await fetch('http://localhost:3000/destinations', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 
+        'Content-Type': 'application/json' 
+      },
       body: JSON.stringify(formData),
     });
     if (!res.ok) throw new Error('Failed to add');
@@ -38,7 +40,9 @@ export default function App() {
   async function handleEdit(formData) {
     const res = await fetch(`${'http://localhost:3000/destinations'}/${formData.id}`, {
       method: 'PATCH',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 
+        'Content-Type': 'application/json' 
+      },
       body: JSON.stringify(formData),
     });
     if (!res.ok) throw new Error('Failed to update');
