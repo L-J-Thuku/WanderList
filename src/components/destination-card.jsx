@@ -54,13 +54,13 @@ export default function DestinationCard({ destination, onDelete }) {
               e.stopPropagation();
               navigate(`/destinations/${id}/edit`);
             }}
-            className="font-[Inter] text-[10px] tracking-[0.15em] uppercase px-3.5 py-1.5 rounded-sm border border-[rgba(24,95,165,0.13)] text-[#2a4a6b] bg-white hover:border-blue-light hover:text-blue hover:bg-blue-pale transition-all duration-150"
+            className="font-[Inter] text-[10px] tracking-[0.15em] uppercase px-3.5 py-1.5 rounded-sm border border-[rgba(24,95,165,0.30)] text-[#2a4a6b] bg-white hover:bg-[#add5fe]"
           >
             Edit
           </button>
           <button
             onClick={handleDelete}
-            className="font-[Inter] text-[10px] tracking-[0.15em] uppercase px-3.5 py-1.5 rounded-sm border border-[#F7C1C1] text-[#A32D2D] bg-white hover:bg-[#FCEBEB] transition-all duration-150"
+            className="font-[Inter] text-[10px] tracking-[0.15em] uppercase px-3.5 py-1.5 rounded-sm border border-[#F7C1C1] text-[#A32D2D] bg-white hover:bg-[#FCEBEB]"
           >
             Delete
           </button>

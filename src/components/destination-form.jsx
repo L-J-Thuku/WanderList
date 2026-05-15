@@ -137,11 +137,11 @@ export default function DestinationForm({ onSubmit, existingData }) {
 
           <div className="flex gap-3 mt-2">
             <button type="button" onClick={() => navigate(-1)}
-              className="font-[Inter] text-[11px] tracking-[0.2em] uppercase px-6 py-3.5 rounded-sm border border-[rgba(24,95,165,0.13)] text-[#2a4a6b] bg-white hover:border-[#042C53] hover:text-[#042C53] transition-all duration-200">
+              className="font-[Inter] text-[11px] tracking-[0.2em] uppercase px-6 py-3.5 rounded-sm border border-[rgba(24,95,165,0.13)] text-[#2a4a6b] bg-white hover:border-[#042C53] hover:text-[#042C53]">
               Cancel
             </button>
             <button type="submit" disabled={loading}
-              className="flex-1 font-[Inter] text-[11px] tracking-[0.2em] uppercase py-3.5 rounded-sm bg-green text-white bg-[#3B6D11] hover:-translate-y-px transition-all duration-200">
+              className="flex-1 font-[Inter] text-[11px] tracking-[0.2em] uppercase py-3.5 rounded-sm bg-green text-white bg-[#3B6D11]">
               {loading ? 'Saving...' : isEdit ? 'Update Destination' : 'Save to Bucket List'}
             </button>
           </div>
