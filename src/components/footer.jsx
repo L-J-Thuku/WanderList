@@ -15,7 +15,7 @@ export default function Footer() {
         </p>
         <p className="flex flex-row text-[11px] font-[Inter] tracking-widest uppercase text-white/60 mt-1">
           <Copyright className='flex items-center size-3 mr-1.5'/> 
-          {new Date().getFullYear()} WanderList. Built with React.
+          2026 WanderList. Built with React.
         </p>
       </div>
     </footer>
