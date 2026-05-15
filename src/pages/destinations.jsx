@@ -24,10 +24,6 @@ export default function Destinations({ destinations, onDelete }) {
           <h1 className="font-[Playfair_Display] text-[44px] font-light text-white leading-[1.15]">
             My Bucket List
           </h1>
-          <p className="text-[12px] tracking-widest uppercase text-white/35 mt-3 font-[Playfair_Display_SC]">
-            {filtered.length} {filtered.length === 1 ? 'destination' : 'destinations'}
-            {activeStatus !== 'All' ? ` · ${activeStatus}` : ''}
-          </p>
         </div>
       </div>
 
