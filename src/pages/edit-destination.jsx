@@ -3,6 +3,6 @@ import DestinationForm from '../components/destination-form';
 
 export default function EditDestination({ destinations, onEdit }) {
   const { id }   = useParams();
-  const existing = destinations.find((d) => d.id === parseInt(id));
+  const existing = destinations.find((d) => String(d.id) === String(id));
   return <DestinationForm onSubmit={onEdit} existingData={existing} />;
 }

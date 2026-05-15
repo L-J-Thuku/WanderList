@@ -5,7 +5,6 @@ import Navbar from './components/navbar';
 import Footer from './components/footer';
 import Home from './pages/home';
 import Destinations from './pages/destinations';
-import DestinationDetail from './pages/destination-detail';
 import AddDestination from './pages/add-destination';
 import EditDestination from './pages/edit-destination';
 
@@ -14,7 +13,6 @@ export default function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
-  // READ
   useEffect(() => {
     fetch('http://localhost:3000/destinations')
       .then((res) => {
@@ -26,11 +24,12 @@ export default function App() {
       .finally(() => setLoading(false));
   }, []);
 
-  // CREATE
   async function handleAdd(formData) {
     const res = await fetch('http://localhost:3000/destinations', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 
+        'Content-Type': 'application/json' 
+      },
       body: JSON.stringify(formData),
     });
     if (!res.ok) throw new Error('Failed to add');
@@ -38,11 +37,12 @@ export default function App() {
     setDestinations((prev) => [...prev, newDest]);
   }
 
-  // UPDATE
   async function handleEdit(formData) {
     const res = await fetch(`${'http://localhost:3000/destinations'}/${formData.id}`, {
       method: 'PATCH',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 
+        'Content-Type': 'application/json' 
+      },
       body: JSON.stringify(formData),
     });
     if (!res.ok) throw new Error('Failed to update');
@@ -50,7 +50,6 @@ export default function App() {
     setDestinations((prev) => prev.map((d) => (d.id === updated.id ? updated : d)));
   }
 
-  // DELETE
   async function handleDelete(id) {
     const res = await fetch(`${'http://localhost:3000/destinations'}/${id}`, { method: 'DELETE' });
     if (!res.ok) throw new Error('Failed to delete');
@@ -60,10 +59,7 @@ export default function App() {
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center h-screen gap-4">
-        <span className="font-[Cinzel_Decorative] text-[28px] font-bold text-[#042C53] tracking-wide">
-          W<span className="text-green font-[Cinzel_Decorative]">L</span>
-        </span>
-        <p className="font-cormorant italic text-[#6b8fa8] text-[16px]">
+        <p className="font-[Inter] italic text-[#6b8fa8] text-[16px]">
           Loading your destinations…
         </p>
       </div>
@@ -78,9 +74,6 @@ export default function App() {
             CONNECTION ERROR
           </p>
           <p className="text-[#6b8fa8] max-w-md leading-relaxed">{error}</p>
-          <code className="block mt-4 bg-green-pale text-[#3B6D11] px-4 py-2 rounded text-[13px]">
-            json-server --watch db.json --port 3000
-          </code>
         </div>
       </div>
     );
@@ -96,8 +89,6 @@ export default function App() {
               element={<Home destinations={destinations} onDelete={handleDelete} />} />
             <Route path="/destinations"
               element={<Destinations destinations={destinations} onDelete={handleDelete} />} />
-            <Route path="/destinations/:id"
-              element={<DestinationDetail destinations={destinations} onDelete={handleDelete} />} />
             <Route path="/destinations/:id/edit"
               element={<EditDestination destinations={destinations} onEdit={handleEdit} />} />
             <Route path="/add"
