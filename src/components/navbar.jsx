@@ -11,7 +11,7 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 flex items-center justify-between px-12 h-17 bg-[#FAFCFE]/95 backdrop-blur-sm border-b border-[rgba(24,95,165,0.13)]">
       <Link to="/" className="font-[Cinzel_Decorative] text-2xl font-bold text-[#042C53] tracking-wide">
-        W<span className="text-green-500 font-[Cinzel_Decorative]">L</span>
+        W<span className="text-[#3B6D11] font-[Cinzel_Decorative]">L</span>
       </Link>
 
       <div className="flex gap-9 font-[Playfair_Display_SC]">
