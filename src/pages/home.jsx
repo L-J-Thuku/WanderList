@@ -29,11 +29,11 @@ export default function Home({ destinations, onDelete }) {
           </p>
           <div className="flex gap-3 justify-center flex-wrap">
             <Link to="/add"
-              className="text-white font-[Inter] text-[11px] tracking-[0.2em] uppercase px-8 py-3.5 rounded-sm bg-[#3B6D11] hover:-translate-y-px transition-all duration-200">
+              className="text-white font-[Inter] text-[11px] tracking-[0.2em] uppercase px-8 py-3.5 rounded-sm bg-[#3B6D11]">
               Start Your List
             </Link>
             <Link to="/destinations"
-              className="bg-transparent text-white border border-white/50 font-[Inter] text-[11px] tracking-[0.2em] uppercase px-8 py-3.5 rounded-sm hover:bg-white/10 hover:border-white transition-all duration-200">
+              className="bg-transparent text-white border border-white/50 font-[Inter] text-[11px] tracking-[0.2em] uppercase px-8 py-3.5 rounded-sm hover:bg-white/10 hover:border-white">
               Browse Destinations
             </Link>
           </div>

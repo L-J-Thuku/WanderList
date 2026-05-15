@@ -4,7 +4,7 @@ export default function Navbar() {
   const { pathname } = useLocation();
 
   const linkBase =
-    'text-[11px] tracking-[0.2em] uppercase font-medium pb-0.75 border-b-[1.5px] transition-colors duration-200';
+    'text-[11px] tracking-[0.2em] uppercase font-medium pb-0.75 border-b-[1.5px]';
   const linkActive = 'text-blue border-green';
   const linkIdle   = 'text-[#6b8fa8] border-transparent hover:text-[#042C53]';
 
@@ -31,7 +31,7 @@ export default function Navbar() {
 
       <Link
         to="/add"
-        className="bg-[#042C53] text-white font-[Display_Playfair_SC] text-[11px] tracking-[0.2em] uppercase px-6 py-2.5 rounded-sm transition-all duration-200 hover:bg-blue hover:-translate-y-px"
+        className="bg-[#042C53] text-white font-[Display_Playfair_SC] text-[11px] tracking-[0.2em] uppercase px-6 py-2.5 rounded-sm"
       >
         + Add Destination
       </Link>
